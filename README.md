@@ -32,3 +32,24 @@ Comparison operators (e.g., =, <>, >, <, >=, <=) are used to compare values in t
 ```sql
 SELECT product_name, unit_price FROM products WHERE unit_price < 50;
 ```
+
+### **Using Wildcards with WHERE Clause:**
+The WHERE clause can also be used with wildcard characters for pattern matching. For instance, to retrieve all customers with names starting with "Joh," you can use the LIKE operator and the '%' wildcard as follows:
+
+```sql
+SELECT * FROM customers WHERE customer_name LIKE 'Joh%';  
+ ```
+
+### **Combining Conditions with Parentheses:**
+To create more complex conditions, you can use parentheses to group logical expressions. For example, to retrieve products with a unit price less than 50 or belonging to the "Electronics" category, you can use parentheses and the OR operator as follows:
+
+```sql
+SELECT product_name, unit_price, category FROM products WHERE (unit_price < 50 OR category = 'Electronics');  
+```
+
+### **NULL Values and IS NULL/IS NOT NULL:**
+To filter rows based on **NULL** values, you can use the **IS NULL** or **IS NOT NULL** operators. For example, to retrieve employees with no assigned manager, you can use the following query:
+
+```sql
+SELECT * FROM employees WHERE manager_id IS NULL;
+```
