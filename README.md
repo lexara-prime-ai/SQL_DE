@@ -24,3 +24,11 @@ You can use logical operators (**AND, OR, NOT**) to create more complex conditio
 ```sql
 SELECT * FROM employees WHERE salary > 50000 AND department = 'Sales';
 ```
+
+### **Comparison Operators in WHERE Clause:**
+  
+Comparison operators (e.g., =, <>, >, <, >=, <=) are used to compare values in the WHERE clause. For example, to retrieve products with a unit price less than 50, you can use the following query:
+
+```sql
+SELECT product_name, unit_price FROM products WHERE unit_price < 50;
+```
